@@ -12,10 +12,11 @@ public class Note {
 			int fiveHundredRupeeNote) {
 		super();
 		this.tenRupeeNote = tenRupeeNote;
-		this.fiftyRupeeNote  = twentyRupeeNote;
+		this.twentyRupeeNote  = twentyRupeeNote;
 		this.fiftyRupeeNote = fiftyRupeeNote;
 		this.hundredRupeeNote = hundredRupeeNote;
 		this.fiveHundredRupeeNote = fiveHundredRupeeNote;
+		System.out.println("Notes Object has been sucessfully created.....!!!!");
 	}
 
 	public int getTenRupeeNote() {
@@ -57,5 +58,7 @@ public class Note {
 	public void setFiveHundredRupeeNote(int fiveHundredRupeeNote) {
 		this.fiveHundredRupeeNote = fiveHundredRupeeNote;
 	}
+
+	
 
 }

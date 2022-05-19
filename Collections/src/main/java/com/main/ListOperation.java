@@ -1,6 +1,8 @@
 package com.main;
 
 import java.util.ArrayList;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,10 +11,10 @@ import com.model.Address;
 import com.model.Employee;
 
 public class ListOperation {
+	
+	private static final Logger LOGGER = LogManager.getLogger(ListOperation.class);
 
 	public static void main(String[] args) {
-
-		
 
 		Address address = new Address(1, "Perungudi", "Chennai");
 		Address address2 = new Address(2, "Perungudi1", "Chennai");
@@ -44,7 +46,7 @@ public class ListOperation {
 //				System.out.println(object1.getDoorNo());
 //				System.out.println(object1.getCity());
 //			};
-			
+			LOGGER.info(list+ "Successsful");
 
 		}
 

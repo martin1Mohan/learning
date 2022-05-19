@@ -15,6 +15,7 @@ public class Wallet {
 		this.walletId = walletId;
 		this.coins = coins;
 		this.notes = notes;
+		System.out.println("Wallet Object along with coins list and notes list has been sucessfully created.....!!!!");
 	}
 
 	public String getWalletName() {

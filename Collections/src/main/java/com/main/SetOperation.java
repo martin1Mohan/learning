@@ -3,6 +3,7 @@ package com.main;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 import com.model.Address;
 import com.model.Employee;
@@ -11,8 +12,8 @@ public class SetOperation {
 
 	public static void main(String[] args) {
 
-		Employee employee = new Employee(1, "Mohan", 12345);
-		Employee employee2 = new Employee(2, "Murali", 45667);
+		Employee employee = new Employee(8, "Mohan", 12345);
+		Employee employee2 = new Employee(4, "Murali", 45667);
 		Employee employee3 = new Employee(3, "Rao", 78999);
 
 		Address address = new Address(1, "Perungudi", "Chennai");
@@ -46,7 +47,18 @@ public class SetOperation {
 			
 
 		}
+		
+		//TreeSet Collection....
+		
+		Set<Employee> treeSet = new TreeSet<Employee>();
 
+		treeSet.add(employee);
+		treeSet.add(employee2);
+		treeSet.add(employee3);
+		
+		for (Employee emp : treeSet) {
+			System.out.println("Sorted Name's :" + emp.getEmpName());
+		}
 	}
 
 }

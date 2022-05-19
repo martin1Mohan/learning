@@ -13,6 +13,7 @@ public class Coin {
 		this.twoRupeeCoin = twoRupeeCoin;
 		this.fiveRupeeCoin = fiveRupeeCoin;
 		this.tenRupeeCoin = tenRupeeCoin;
+		System.out.println("Coins Object has been sucessfully created.....!!!!");
 	}
 
 	public int getOneRupeeCoin() {
