@@ -1,0 +1,12 @@
+package com.service;
+
+import java.util.List;
+
+import com.model.Employee;
+
+public class BusinessSeviceStreamsDemo {
+
+	public long countEmployee(List<Employee> employees, char searchParam){
+		return 0L;
+	}
+}

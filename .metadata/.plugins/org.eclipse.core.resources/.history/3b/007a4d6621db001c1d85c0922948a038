@@ -1,0 +1,17 @@
+package com.main;
+
+import java.util.function.BiConsumer;
+
+public class PredefinedInterface {
+
+	public static void main(String[] args) {
+
+		BiConsumer<String, Integer> biConsumer= (str, intVar) -> {
+			System.out.println("String Value : "+ str);
+			System.out.println("Integer Value : "+ intVar);
+		};
+		
+		biConsumer.accept("Mohan Murali Rao", 25);
+	}
+
+}

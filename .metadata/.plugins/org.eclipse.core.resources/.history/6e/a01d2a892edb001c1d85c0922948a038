@@ -1,0 +1,18 @@
+package com.methodReference;
+
+import com.model.Employee;
+import com.service.InterfaceConstructor;
+
+public class ConstructorMethod {
+	
+	public Employee setValues(int a, String b, float c) {
+		Employee employee= new Employee(a, b, c);
+		return employee;
+	}
+
+	public static void main(String[] args) {
+
+		InterfaceConstructor constructor= ConstructorMethod::new setValues;
+	}
+
+}

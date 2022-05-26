@@ -1,0 +1,9 @@
+package com.model;
+
+public class Student {
+
+	private int stdId;
+	private String stdName;
+	private int age;
+	private int marks;
+}

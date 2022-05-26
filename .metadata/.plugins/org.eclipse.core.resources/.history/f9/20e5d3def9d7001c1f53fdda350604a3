@@ -1,0 +1,23 @@
+package com.model;
+
+public class Student {
+
+	private int stdId;
+	private String stdName;
+	private int age;
+	private int marks;
+	
+	public Student(int stdId, String stdName, int age, int marks) {
+		super();
+		this.stdId = stdId;
+		this.stdName = stdName;
+		this.age = age;
+		this.marks = marks;
+	}
+
+	public Student() {
+		super();
+	}
+	
+	
+}
