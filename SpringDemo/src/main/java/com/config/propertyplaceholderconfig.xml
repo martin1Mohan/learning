@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="employee" class="com.model.Employee">
+		<constructor-arg value="20"></constructor-arg>
+		<constructor-arg value="Mohan"></constructor-arg>
+		<constructor-arg value="20000"></constructor-arg>
+		
+	</bean>
+	<bean id="employee1" class="com.model.Employee">
+			
+	</bean>
+    <bean id="employee2" class="com.model.Employee">
+			<property name="empId" value="12"></property>
+			<property name="empName" value="Murali"></property>
+			<property name="salary" value="120000"></property>
+	</bean>
+
+</beans>
+
+

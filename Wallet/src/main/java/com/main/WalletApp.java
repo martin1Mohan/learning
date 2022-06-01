@@ -42,6 +42,7 @@ public class WalletApp {
 		int tenRupeeCoin= sc.nextInt();
 
 		Coin coin1 = new Coin(oneRupeeCoin, twoRupeeCoin, fiveRupeeCoin, tenRupeeCoin);
+		LOGGER.info("User input coin data : " + coin1);
 		System.out.println("Default coin object is creating....");
 		Coin coin2= new Coin(2, 2, 2, 2);
 
@@ -68,6 +69,7 @@ public class WalletApp {
 		int fiveHundredRupeeNote= sc.nextInt();
 		
 		Note note1 = new Note(tenRupeeNote, twentyRupeeNote, fiftyRupeeNote, hundredRupeeNote, fiveHundredRupeeNote);
+		LOGGER.info("User input note data : " + note1);
 		System.out.println("Default Note object is creating....");
 		Note note2 = new Note(2, 2, 2, 2, 2);
 

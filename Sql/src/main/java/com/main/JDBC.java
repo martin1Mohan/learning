@@ -15,9 +15,10 @@ public class JDBC {
 			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/sonoo", "root", "Stgit123");
 			Statement stmt = con.createStatement();
 
-//			long re = stmt.executeUpdate("delete from emp1;");
-//			System.out.println(re);
-
+			
+//			  long re = stmt.executeUpdate("delete from emp1;"); 
+//			  System.out.println(re);
+			 
 			ResultSet rs = stmt.executeQuery("select * from EmployeeData");
 
 			while (rs.next())
