@@ -27,7 +27,7 @@ public class DbMainTerminalApp {
 		
 		if (validUser != null) {
 			LOGGER.info(validUser.getUserName()+ ", Logged in..");
-			System.out.println("Hello, "+validUser.getUserName()+"  ------YOU HAVE ENTERED DB TERMINAL PLEASE FOLLOW THE INSTRUCTIONS");
+			System.out.println("Hello, "+validUser.getUserName()+" YOU HAVE ENTERED USER DB PLEASE FOLLOW THE INSTRUCTIONS...");
 			while (go) {
 				System.out.println("Enter 1 to create new user");
 				System.out.println("Enter 2 to read all users data");
@@ -37,7 +37,7 @@ public class DbMainTerminalApp {
 				int choice = scan.nextInt();
 				switch (choice) {
 				case 1:
-					System.out.println("Please have no spaces in username or password as it have to be single word");
+					System.out.println("no spaces allowed in username or password");
 					System.out.println();
 					System.out.println("Enter username ");
 					scan.nextLine();
@@ -48,14 +48,15 @@ public class DbMainTerminalApp {
 					if (user != null) {
 						System.out.println(user);
 					} else {
-						System.out.println("dommmm");
+						System.out.println("Some unknown issue caused please contact tech team😢!");
 					}
 					break;
 				case 2:
+					System.out.println("List of User's --");
 					dbWorks.readAllUsers();
 					break;
 				case 3:
-					System.out.println("Please have no spaces in username or password as it have to be single word");
+					System.out.println("no spaces allowed in username or password");
 					System.out.println();
 					System.out.println("Enter user id ");
 					int id = scan.nextInt();
@@ -70,7 +71,7 @@ public class DbMainTerminalApp {
 						String password11 = scan.nextLine();
 						dbWorks.updateUser(id, name1, password11);
 					} else {
-						System.out.println("Employee id not found !!");
+						System.out.println("Employee id not found 😢!!");
 					}
 
 					break;
@@ -79,9 +80,10 @@ public class DbMainTerminalApp {
 					int id2 = scan.nextInt();
 					User checkUser1 = dbWorks.readByUserId(id2);
 					if (checkUser1.getUserName() != null) {
+						System.out.println("Username : "+checkUser1.getUserName()+ " is being removed...");
 						dbWorks.deleteUserById(id2);
 					} else {
-						System.out.println("Employee id not found !!");
+						System.err.println("Employee id not found 😢!!");
 					}
 
 					break;
@@ -91,11 +93,11 @@ public class DbMainTerminalApp {
 				System.out.println();
 			}
 			LOGGER.info(validUser.getUserName()+" Logged out...!");
-			System.out.println("----------Thanks for using Our DB, Happy DBing....!----------");
+			System.out.println("----------Thanks for using Our DB, All your Operations saved sucessfully you can leave now...😀!----------");
 			scan.close();
 		} else {
 			LOGGER.info("Some unknown User with id :"+ userId+ " tried logging in...");
-			System.err.println("Sorry, you are not authorized, Please contact Tech Team !!!!!");
+			System.err.println("Sorry, you are not authorized 😢, Please contact Tech Team !!!!!");
 		}
 	}
 }

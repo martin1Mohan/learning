@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://controller.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://controller.com" xmlns:intf="http://controller.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://controller.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="myFunction1">
+    <complexType/>
+   </element>
+   <element name="myFunction1Response">
+    <complexType>
+     <sequence>
+      <element name="myFunction1Return" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="myFunction2">
+    <complexType/>
+   </element>
+   <element name="myFunction2Response">
+    <complexType>
+     <sequence>
+      <element name="myFunction2Return" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="myFunction1Response">
+
+      <wsdl:part element="impl:myFunction1Response" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="myFunction2Request">
+
+      <wsdl:part element="impl:myFunction2" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="myFunction1Request">
+
+      <wsdl:part element="impl:myFunction1" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="myFunction2Response">
+
+      <wsdl:part element="impl:myFunction2Response" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="MvcDemo">
+
+      <wsdl:operation name="myFunction1">
+
+         <wsdl:input message="impl:myFunction1Request" name="myFunction1Request">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:myFunction1Response" name="myFunction1Response">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="myFunction2">
+
+         <wsdl:input message="impl:myFunction2Request" name="myFunction2Request">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:myFunction2Response" name="myFunction2Response">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="MvcDemoSoapBinding" type="impl:MvcDemo">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="myFunction1">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="myFunction1Request">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="myFunction1Response">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="myFunction2">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="myFunction2Request">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="myFunction2Response">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="MvcDemoService">
+
+      <wsdl:port binding="impl:MvcDemoSoapBinding" name="MvcDemo">
+
+         <wsdlsoap:address location="http://localhost:8080/SpringMVC/services/MvcDemo"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
